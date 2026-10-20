@@ -15,7 +15,8 @@
 
 1. Independent API/security review under the [compatibility policy](RELEASING.md).
 2. Licensing/source-history review and public release metadata. Independent
-   package installation is exercised by the consumer test, not yet npm-published.
+   package installation is exercised by the consumer test. See the
+   [package guide](INSTALL.md) for the published npm artifact.
 3. Private security reporting and maintenance ownership ready for public use.
 4. Explicit owner approval before visibility changes or package publication.
 

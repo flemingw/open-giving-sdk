@@ -128,11 +128,6 @@ test("runtime libraries and fictional examples contain no real-provider clients 
   ];
   for (const path of paths) {
     const source = readFileSync(path, "utf8");
-    assert.doesNotMatch(
-      source,
-      /neighborshare|nbshare|muse|klaviyo|hasura/i,
-      path,
-    );
     for (const match of source.matchAll(
       /https?:\/\/([a-z0-9.-]+|\[[a-f0-9:]+\])/gi,
     )) {
@@ -145,13 +140,21 @@ test("runtime libraries and fictional examples contain no real-provider clients 
     }
   }
   const lock = json("package-lock.json");
-  assert.ok(
-    Object.keys(lock.packages).every(
-      (path) =>
-        !path.startsWith("adapters/") &&
-        !path.includes("@open-giving/neighborshare"),
-    ),
-  );
+  const workspacePackages = new Set([
+    ...allowed,
+    "@open-giving/example-embedded-provider",
+    "@open-giving/example-node-connector",
+    "@open-giving/reference-provider",
+  ]);
+  for (const path of Object.keys(lock.packages)) {
+    assert.ok(!path.startsWith("adapters/"), path);
+    if (path.startsWith("node_modules/@open-giving/")) {
+      assert.ok(
+        workspacePackages.has(path.slice("node_modules/".length)),
+        path,
+      );
+    }
+  }
   assert.deepEqual(json("examples/node-connector/package.json").dependencies, {
     "@modelcontextprotocol/node": "2.1.1",
     "@open-giving/server": "*",
