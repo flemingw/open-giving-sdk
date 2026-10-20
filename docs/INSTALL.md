@@ -1,7 +1,7 @@
 # Install Open Giving
 
 ```sh
-npm install --save-exact @willwfleming/open-giving-sdk@0.1.0-alpha.4
+npm install --save-exact @willwfleming/open-giving-sdk@0.1.0-alpha.5
 ```
 
 Use Node.js 22+. This is an experimental public alpha; pin the exact version.

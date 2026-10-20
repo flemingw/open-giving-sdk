@@ -21,7 +21,7 @@ export const LocationSchema = z.object({
 });
 export const OrganizationSchema = z.object({
   id: IdSchema,
-  displayName: z.string().min(1).max(200),
+  displayName: z.string().min(1).max(256),
 });
 export const VerificationSchema = z.enum([
   "applicant",
@@ -32,7 +32,7 @@ export const VerificationSchema = z.enum([
 ]);
 export const ProviderInfoSchema = z.object({
   id: IdSchema,
-  displayName: z.string().min(1).max(200),
+  displayName: z.string().min(1).max(256),
   verification: VerificationSchema,
   capabilities: z.object({
     currencies: z.array(z.string().regex(/^[A-Z]{3}$/)).min(1),
@@ -51,7 +51,7 @@ export const PublicOpportunitySchema = z.object({
   providerId: IdSchema,
   id: IdSchema,
   organization: OrganizationSchema,
-  title: z.string().min(1).max(160),
+  title: z.string().min(1).max(256),
   summary: z.string().min(1).max(10000),
   category: z.string().min(1).max(200),
   amount: MoneySchema.describe(
