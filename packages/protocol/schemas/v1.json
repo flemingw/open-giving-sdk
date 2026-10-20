@@ -34,7 +34,7 @@
         "displayName": {
           "type": "string",
           "minLength": 1,
-          "maxLength": 200
+          "maxLength": 256
         },
         "verification": {
           "type": "string",
@@ -127,7 +127,7 @@
             "displayName": {
               "type": "string",
               "minLength": 1,
-              "maxLength": 200
+              "maxLength": 256
             }
           },
           "required": [
@@ -139,7 +139,7 @@
         "title": {
           "type": "string",
           "minLength": 1,
-          "maxLength": 160
+          "maxLength": 256
         },
         "summary": {
           "type": "string",
@@ -369,7 +369,7 @@
                   "displayName": {
                     "type": "string",
                     "minLength": 1,
-                    "maxLength": 200
+                    "maxLength": 256
                   }
                 },
                 "required": [
@@ -381,7 +381,7 @@
               "title": {
                 "type": "string",
                 "minLength": 1,
-                "maxLength": 160
+                "maxLength": 256
               },
               "summary": {
                 "type": "string",
@@ -572,7 +572,7 @@
                 "displayName": {
                   "type": "string",
                   "minLength": 1,
-                  "maxLength": 200
+                  "maxLength": 256
                 }
               },
               "required": [
@@ -584,7 +584,7 @@
             "title": {
               "type": "string",
               "minLength": 1,
-              "maxLength": 160
+              "maxLength": 256
             },
             "summary": {
               "type": "string",
@@ -735,7 +735,7 @@
               "displayName": {
                 "type": "string",
                 "minLength": 1,
-                "maxLength": 200
+                "maxLength": 256
               },
               "verification": {
                 "type": "string",
@@ -837,7 +837,7 @@
               "displayName": {
                 "type": "string",
                 "minLength": 1,
-                "maxLength": 200
+                "maxLength": 256
               },
               "verification": {
                 "type": "string",
@@ -1258,7 +1258,7 @@
                 "displayName": {
                   "type": "string",
                   "minLength": 1,
-                  "maxLength": 200
+                  "maxLength": 256
                 }
               },
               "required": [
