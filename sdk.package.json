@@ -1,0 +1,23 @@
+{
+  "name": "@willwfleming/open-giving-sdk",
+  "version": "0.1.0-alpha.4",
+  "private": false,
+  "publishConfig": { "access": "public", "tag": "alpha" },
+  "type": "module",
+  "description": "Provider-neutral giving contracts and embeddable MCP/HTTP tools",
+  "license": "Apache-2.0",
+  "engines": { "node": ">=22" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flemingw/open-giving-sdk.git"
+  },
+  "files": [
+    "dist",
+    "schemas",
+    "openapi.json",
+    "LICENSE",
+    "DCO",
+    "README.md",
+    "npm-shrinkwrap.json"
+  ]
+}

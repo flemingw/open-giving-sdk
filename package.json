@@ -1,0 +1,36 @@
+{
+  "name": "open-giving",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Provider-owned giving connectors: open-source contracts, SDK and MCP/HTTP adapters",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -b",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "demo": "npm run build && node examples/demo.mjs",
+    "check": "npm test && npm run contracts:check && npm run docs:check && npm run format:check && npm run security:check",
+    "docs:check": "node scripts/check-docs.mjs",
+    "format:check": "prettier --check .",
+    "format": "prettier --write .",
+    "security:check": "node scripts/security-check.mjs",
+    "start": "npm run build && node --env-file-if-exists=.env examples/node-connector/dist/cli.js",
+    "contracts": "npm run build && node scripts/generate-contracts.mjs",
+    "contracts:check": "npm run build && node scripts/generate-contracts.mjs --check",
+    "pack:sdk": "npm run build && node scripts/pack-sdk.mjs"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.3.1",
+    "@types/node": "22.20.5",
+    "prettier": "3.6.2",
+    "typescript": "5.9.3"
+  }
+}

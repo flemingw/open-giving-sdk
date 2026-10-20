@@ -1,0 +1,13 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/protocol" },
+    { "path": "packages/provider-sdk" },
+    { "path": "packages/conformance" },
+    { "path": "examples/reference-provider" },
+    { "path": "packages/registry" },
+    { "path": "examples/embedded-provider" },
+    { "path": "packages/server" },
+    { "path": "examples/node-connector" }
+  ]
+}

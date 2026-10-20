@@ -1,0 +1,41 @@
+{
+  "name": "@open-giving/server",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts",
+    "dist/service.js",
+    "dist/service.d.ts",
+    "dist/oauth.js",
+    "dist/oauth.d.ts",
+    "dist/tools.js",
+    "dist/tools.d.ts",
+    "dist/onboarding.js",
+    "dist/onboarding.d.ts"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./service": {
+      "types": "./dist/service.d.ts",
+      "default": "./dist/service.js"
+    },
+    "./tools": {
+      "types": "./dist/tools.d.ts",
+      "default": "./dist/tools.js"
+    }
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.3.1",
+    "@open-giving/protocol": "*",
+    "@open-giving/provider-sdk": "*",
+    "@open-giving/registry": "*",
+    "zod": "4.6.7",
+    "jose": "6.2.12"
+  }
+}

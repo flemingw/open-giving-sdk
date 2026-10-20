@@ -1,0 +1,13 @@
+{
+  "name": "@open-giving/example-node-connector",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@modelcontextprotocol/node": "2.1.1",
+    "@open-giving/server": "*",
+    "@open-giving/registry": "*",
+    "@open-giving/reference-provider": "*"
+  }
+}

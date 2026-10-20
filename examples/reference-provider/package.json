@@ -1,0 +1,17 @@
+{
+  "name": "@open-giving/reference-provider",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@open-giving/protocol": "*",
+    "@open-giving/provider-sdk": "*"
+  }
+}

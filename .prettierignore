@@ -1,0 +1,8 @@
+node_modules/
+dist/
+coverage/
+package-lock.json
+packages/protocol/openapi.json
+packages/protocol/schemas/v1.json
+*.tsbuildinfo
+.artifacts/

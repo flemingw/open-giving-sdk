@@ -1,0 +1,17 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.wrangler/
+.vercel/
+.private/
+knowledge/
+*.docx
+*.log
+.artifacts/
